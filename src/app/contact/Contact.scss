@@ -1,0 +1,121 @@
+.contact-component {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 3rem 5rem;
+    margin-top: 70px;
+
+    .details {
+        .subtitle {
+            font-size: 1.2rem;
+            color: #3182ce;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .desc {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        .contacts {
+            .each {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1rem;
+                font-size: 16px;
+                color: #333;
+
+                .icon {
+                    margin-right: 0.8rem;
+                    font-size: 1.2rem;
+                    color: #3182ce;
+                }
+            }
+        }
+    }
+
+    .form {
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    margin-bottom: 0.5rem;
+                    font-size: 14px;
+                    display: none;
+                }
+
+                input,
+                textarea {
+                    padding: 0.8rem 1rem;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                    font-size: 16px;
+                    width: 100%;
+                    outline: none;
+                    background-color: white;
+
+                    &:focus {
+                        border-color: #3182ce;
+                    }
+                }
+            }
+
+            button {
+                padding: 0.7rem;
+                background-color: #3182ce;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #2563eb;
+                }
+            }
+
+            .form-note {
+                margin-top: 1rem;
+                font-size: 14px;
+                color: #777;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-component {
+        padding: 1.5rem;
+        grid-template-columns: 1fr;
+
+        .details {
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .title {
+                font-size: 2rem;
+
+            }
+        }
+    }
+}
